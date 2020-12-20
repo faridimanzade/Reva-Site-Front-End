@@ -1,0 +1,1830 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+
+::-moz-selection {
+    color: white;
+    background: darkcyan;
+}
+
+::selection {
+    color: white;
+    background: darkcyan;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    background: rgb(82, 82, 82);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(176, 145, 79, 0.7);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(176, 145, 79);
+}
+
+
+.mainContainer {
+    background-color: white;
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ============================================================ NAVIGATION */
+/* ============================================================ NAVIGATION */
+
+.navigationArea {
+    position: fixed;
+    background-color: white;
+    height: 100Vh;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px rgb(240, 240, 240) solid;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.navigationMoveIcon {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    background-color: transparent;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border: black solid 1px;
+    border-radius: 50%;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mainLogo {
+    margin-top: 30px;
+    background-color: transparent;
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mainLogo img {
+    height: 100%;
+    width: 100%;
+}
+
+.navigationBar {
+    background-color: transparent;
+    width: 110px;
+    box-shadow: -3px 5px 12px #f1f1f1;
+    margin: 10px;
+}
+
+.navigationBar ul {
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.navigationBar ul li {
+    list-style-type: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px rgb(235, 235, 235) solid;
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navigationBar ul li span:nth-child(1) {
+    background-color: transparent;
+    font-size: 20px;
+    margin: 10px 0 5px;
+}
+
+.navigationBar ul li span:nth-child(2) {
+    background-color: transparent;
+    margin: 5px 0 10px;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.9px;
+}
+
+.contactIcons {
+    background-color: transparent;
+    margin-bottom: 20px;
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(51, 51, 51);
+}
+
+.contactIcons i:hover {
+    color: rgb(176, 145, 79);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* ============================================================ NAVIGATION */
+/* ============================================================ NAVIGATION */
+
+
+/* ============================================================ ALL CONTENTS CONTAINER */
+.contentsArea {
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    height: 100vh;
+    width: calc(100vw - 240px);
+    transition: 0.3s;
+}
+
+/* ============================================================ ALL CONTENTS CONTAINER */
+
+
+/* ============================================================ HOME */
+/* ============================================================ HOME */
+
+.homeArea {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+
+.slideshow-container {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.mySlides {
+    position: absolute;
+    width: calc(100vw - 220px);
+    height: 100vh;
+    transition: 0.7s;
+}
+
+.mySlides img {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    transition: 0.7s;
+    /* opacity: 0; */
+}
+
+.imageDarker {
+    position: relative;
+    width: calc(100vw - 220px);
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+}
+
+.imageDarker .text {
+    background-color: transparent;
+    position: absolute;
+    top: 45%;
+    left: 6%;
+    margin-top: -40px;
+    font-size: 55px;
+    color: white;
+    transition: 0.3s;
+}
+
+.text span {
+    font-weight: 600;
+}
+
+.movingTest {
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    font-size: 30px;
+    margin-top: -40px;
+    color: white;
+}
+
+.portfolioButton {
+    position: absolute;
+    top: 53%;
+    left: 6%;
+    /* margin-top: -18px; */
+    padding: 8px 25px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(176, 145, 79);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.imageDarker .buttons {
+    background-color: transparent;
+    position: absolute;
+    right: 5%;
+    bottom: 7%;
+    display: flex;
+    flex-direction: row;
+}
+
+.imageDarker .buttons button {
+    padding: 10px;
+    background-color: white;
+    border-radius: 50px;
+    border: solid 1px rgb(176, 145, 79);
+    color: rgb(176, 145, 79);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    height: 45px;
+    width: 45px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.imageDarker .buttons button:hover {
+    color: rgb(100, 100, 100);
+}
+
+.buttons button:focus {
+    outline: none;
+}
+
+/* ============================================================ HOME */
+/* ============================================================ HOME */
+
+
+/* ============================================================ ABOUT */
+/* ============================================================ ABOUT */
+
+.aboutArea {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+    display: none;
+}
+
+.aboutHeader {
+    background-color: transparent;
+    padding: 0 50px;
+}
+
+.aboutHeader h2 {
+    font-family: 'Kaushan Script', sans-serif;
+    font-weight: 100;
+    margin: 0;
+}
+
+.aboutHeader h2:nth-child(1) {
+    font-size: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.aboutHeader h2:nth-child(2) {
+    position: relative;
+    font-size: 40px;
+    left: -8px;
+    top: -45px;
+    color: rgb(235, 235, 235);
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.aboutContainer {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutContainerCenter {
+    background-color: transparent;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: 50px auto;
+}
+
+.profileImage {
+    background-image: url("../media/about.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40%;
+    /* width: 0; */
+    height: 350px;
+    align-self: flex-start;
+    border-radius: 10px;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.profileInfoContainer {
+    width: 45%;
+    align-self: flex-start;
+    margin: 0 auto;
+    background-color: peru;
+    display: flex;
+    flex-direction: column;
+}
+
+.profileInfoNavigation {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    border-bottom: 1px rgb(230, 230, 230) solid;
+}
+
+.navigationPath {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    cursor: pointer;
+    border-top: 2px solid transparent;
+    color: rgb(51, 51, 51);
+    transition: 0.3s;
+}
+
+.navigationPath i {
+    font-size: 18px;
+    margin: 10px auto 5px;
+}
+
+.navigationPath p {
+    margin: 0;
+    background-color: transparent;
+    font-size: 15px;
+    margin: 5px auto 10px;
+}
+
+.navigationPathDetailed {
+    background-color: transparent;
+    position: relative;
+}
+
+/* ============================================================ ABOUT----> CARD ONE (ABOUT ME) */
+
+.aboutCard:nth-child(1) {
+    background-color: white;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    padding: 15px 30px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* display: none; */
+}
+
+.aboutCard:nth-child(1) img {
+    width: 110px;
+}
+
+/* ============================================================ ABOUT----> CARD TWO (PROFILE) */
+
+.aboutCard:nth-child(2) {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    padding: 15px 30px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.aboutCard:nth-child(2) .personalInfo {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    letter-spacing: 0.7px;
+}
+
+.aboutCard:nth-child(2) .personalInfoLeft {
+    background-color: transparent;
+    color: black;
+}
+
+.aboutCard:nth-child(2) .personalInfoRight {
+    background-color: transparent;
+    margin-left: 7%;
+    color: rgb(119, 140, 140);
+}
+
+.aboutCard:nth-child(2) .personalInfo p {
+    margin: 8px;
+}
+
+.downloadButton {
+    background-color: transparent;
+    margin: 30px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.downloadButton button {
+    padding: 12px 30px;
+    color: white;
+    font-size: 17px;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(176, 145, 79);
+    cursor: pointer;
+    outline: none;
+}
+
+/* ============================================================ ABOUT----> CARD THREE (SKILLS) */
+
+.aboutCard:nth-child(3) {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    padding: 15px 30px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.aboutSkills {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutSkills .detailedSkill {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    border-bottom: 3px solid rgb(176, 145, 79);
+    border-radius: 2px;
+}
+
+.aboutSkills .detailedSkill p {
+    margin: 7px 0;
+}
+
+.aboutSkills .detailedSkill:nth-child(1) {
+    width: 85%;
+}
+
+.aboutSkills .detailedSkill:nth-child(2) {
+    width: 75%;
+}
+
+.aboutSkills .detailedSkill:nth-child(3) {
+    width: 65%;
+}
+
+.aboutSkills .detailedSkill:nth-child(4) {
+    width: 80%;
+}
+
+.hireButton {
+    background-color: transparent;
+    margin: 30px 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.hireButton button {
+    padding: 12px 30px;
+    color: white;
+    font-size: 17px;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(176, 145, 79);
+    cursor: pointer;
+    outline: none;
+}
+
+/* ============================================================ ABOUT */
+/* ============================================================ ABOUT */
+
+
+/* ============================================================ SERVICES */
+/* ============================================================ SERVICES */
+
+.serviceArea {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+    display: none;
+}
+
+.serviceHeader {
+    background-color: transparent;
+    padding: 0 50px;
+}
+
+.serviceHeader h2 {
+    font-family: 'Kaushan Script', sans-serif;
+    font-weight: 100;
+    margin: 0;
+}
+
+.serviceHeader h2:nth-child(1) {
+    font-size: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.serviceHeader h2:nth-child(2) {
+    position: relative;
+    font-size: 40px;
+    left: -8px;
+    top: -45px;
+    color: rgb(235, 235, 235);
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.serviceContent {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: wrap;
+    background-color: transparent;
+    justify-content: space-between;
+    width: 80%;
+    margin: 50px auto;
+}
+
+.serviceInfo {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 50%;
+    align-self: flex-start;
+    margin: 20px auto;
+}
+
+.serviceCard {
+    width: 40%;
+    background-color: transparent;
+    margin: 10px auto;
+    color: rgb(51, 51, 51);
+}
+
+.serviceVideo {
+    background-image: url("../media/06.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 40%;
+    height: 400px;
+    position: relative;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+.serviceCard img {
+    height: 50px;
+    width: 50px;
+}
+
+.serviceCard h4 {
+    font-size: 19px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.serviceCard p {
+    font-size: 12px;
+    letter-spacing: 0.9px;
+    margin: 0;
+}
+
+.serviceVideo i {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -62px;
+    padding: 12px 55px;
+    background-color: white;
+    color: rgb(176, 145, 79);
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.serviceVideo i:hover {
+    background-color: rgb(176, 145, 79);
+    color: white;
+}
+
+/* ============================================================ SERVICES */
+/* ============================================================ SERVICES */
+
+
+/* ============================================================ PORTFOLIO */
+/* ============================================================ PORTFOLIO */
+.portfolioArea {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+    display: none;
+}
+
+.portfolioHeader {
+    background-color: transparent;
+    padding: 0 50px;
+}
+
+.portfolioHeader h2 {
+    font-family: 'Kaushan Script', sans-serif;
+    font-weight: 100;
+    margin: 0;
+}
+
+.portfolioArea h2:nth-child(1) {
+    font-size: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.portfolioArea h2:nth-child(2) {
+    position: relative;
+    font-size: 40px;
+    left: -8px;
+    top: -45px;
+    color: rgb(235, 235, 235);
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.portfolioCategories {
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolioCategories p {
+    margin: 10px;
+    padding: 5px 20px;
+    border: 1px solid rgb(176, 145, 79);
+    border-radius: 15px;
+    cursor: pointer;
+    color: rgb(51, 51, 51);
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.portfolioPatterns {
+    width: 70%;
+    background-color: transparent;
+    margin: auto;
+}
+
+.portfolioPatterns ul {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolioPatterns li {
+    list-style-type: none;
+    /* height: auto; */
+    width: 30%;
+    margin: 15px auto;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: -3px 5px 12px #f1f1f1;
+}
+
+.cardInfo {
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    opacity: 0;
+    transition: 0.5s;
+    transform: scale(1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardImage {
+    transition: 0.5s;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.cardInfo:hover {
+    opacity: 0.7;
+    overflow: hidden;
+}
+
+.portfolioPatterns li:hover .cardImage {
+    object-fit: cover;
+    transform: scale(1.2);
+}
+
+.cardInfoText {
+    color: white;
+    font-weight: normal;
+}
+
+.cardInfoText h2 {
+    margin: 20px 0 0;
+    font-size: 34px !important;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.cardInfoText h3 {
+    margin: 3px 0 0;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.cardInfo i {
+    align-self: flex-end;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+/* ============================================================ PORTFOLIO */
+/* ============================================================ PORTFOLIO */
+
+
+/* ============================================================ TESTIMONIALS */
+/* ============================================================ TESTIMONIALS */
+
+.testimonialArea {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+    display: none;
+}
+
+
+.testimonialHeader {
+    background-color: transparent;
+    padding: 0 50px;
+}
+
+.testimonialHeader h2 {
+    font-family: 'Kaushan Script', sans-serif;
+    font-weight: 100;
+    margin: 0;
+}
+
+.testimonialHeader h2:nth-child(1) {
+    font-size: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.testimonialHeader h2:nth-child(2) {
+    position: relative;
+    font-size: 40px;
+    left: -8px;
+    top: -45px;
+    color: rgb(235, 235, 235);
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.testimonialContentContainer {
+    background-color: transparent;
+    width: 40%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.allUsers {
+    background-color: transparent;
+    padding: 0;
+}
+
+.allUsers ul {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.allUsers li {
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    list-style-type: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.allUsers li:nth-child(1) {
+    background-image: url("../media/testim1.jpg");
+    left: -15px;
+    bottom: -10px;
+}
+
+.allUsers li:nth-child(2) {
+    background-image: url("../media/testim2.jpg");
+    left: -25px;
+    bottom: 50px;
+}
+
+.allUsers li:nth-child(3) {
+    background-image: url("../media/testim3.jpg");
+    left: 0;
+    bottom: 70px;
+}
+
+.allUsers li:nth-child(4) {
+    background-image: url("../media/testim4.jpg");
+    left: 25px;
+    bottom: 50px;
+}
+
+.allUsers li:nth-child(5) {
+    background-image: url("../media/testim5.jpg");
+    left: 15px;
+    bottom: -10px;
+}
+
+.quoteArea {
+    background-color: transparent;
+    position: relative;
+    border-radius: 5px;
+    border: rgb(176, 145, 79) 1px solid;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0 20px;
+    width: 100%;
+}
+
+.quoteArea img {
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    margin-left: -80px;
+    top: -80px;
+    border-radius: 50%;
+    border: 2px solid rgb(176, 145, 79);
+}
+
+.quoteArea i:nth-child(1) {
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    font-size: 25px;
+}
+
+.quoteArea i:nth-child(5) {
+    position: absolute;
+    bottom: 10%;
+    right: 7%;
+    font-size: 25px;
+}
+
+.quoteArea p:nth-child(3) {
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+    color: rgb(51, 51, 51);
+}
+
+.quoteArea p:nth-child(4) {
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(176, 145, 79);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.testimonialFooter {
+    width: 100%;
+    height: 150px;
+    background-image: url("../media/background-client.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 50px 0;
+}
+
+.footerBackground {
+    background-color: rgba(176, 145, 79, 0.7);
+    height: 100%;
+    width: 100%;
+}
+
+.testimonialIconsContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+}
+
+.testimonialIconsContainer img {
+    width: 60px;
+}
+
+/* ============================================================ TESTIMONIALS */
+/* ============================================================ TESTIMONIALS */
+
+
+/* ============================================================ CONTACT */
+/* ============================================================ CONTACT */
+
+.contactArea {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+    display: none;
+}
+
+.contactHeader {
+    background-color: transparent;
+    padding: 0 50px;
+}
+
+.contactHeader h2 {
+    font-family: 'Kaushan Script', sans-serif;
+    font-weight: 100;
+    margin: 0;
+}
+
+.contactHeader h2:nth-child(1) {
+    font-size: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.contactHeader h2:nth-child(2) {
+    position: relative;
+    font-size: 40px;
+    left: -8px;
+    top: -45px;
+    color: rgb(235, 235, 235);
+    z-index: 1;
+}
+
+.contactContent {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.form {
+    background-color: transparent;
+    padding: 0 20px;
+    width: 48%;
+    margin-left: 2%;
+}
+
+.form form {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.privateInput {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.privateInput input {
+    width: 45%;
+    padding: 15px 10px;
+    border: none;
+    border-bottom: rgb(176, 145, 79) solid 2px;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+
+::placeholder {
+    color: rgb(185, 185, 185);
+    letter-spacing: normal;
+    font-family: 'Poppins', sans-serif;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    margin: 20px 0 20px;
+    padding: 20px;
+    border: none;
+    border-bottom: rgb(176, 145, 79) solid 2px;
+}
+
+.textArea button {
+    padding: 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(176, 145, 79);
+    color: white;
+    letter-spacing: 0.9px;
+    position: relative;
+    height: 45px;
+    cursor: pointer;
+    outline: none;
+}
+
+.buttonArrow {
+    position: absolute;
+    background-color: rgb(176, 145, 79);
+    border-radius: 3px;
+    transition: .3s linear;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0px;
+    overflow: hidden;
+    top: 0;
+    left: 97%;
+    height: 45px;
+}
+
+.textArea button:hover .buttonArrow {
+    width: 35px;
+}
+
+
+.infoCard {
+    background: linear-gradient(to right, #9f8348 0%, #caa75d 100%);
+    width: 48%;
+    position: relative;
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: -3px 6px 23px rgba(144, 144, 144, 0.46);
+}
+
+.infoCard h2 {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    font-size: 125px;
+    transform: rotate(38deg);
+    color: rgba(255, 255, 255, 0.11);
+    font-weight: 100;
+    margin: 0;
+    font-family: 'Kaushan Script', sans-serif;
+}
+
+.infoCard p {
+    color: white;
+    letter-spacing: 1px;
+    margin: 20px 0 20px;
+}
+
+.infoCard p i {
+    margin-right: 15px;
+}
+
+.map {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.mapOpener {
+    height: 35px;
+    background-color: rgb(176, 145, 79);
+    color: white;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.mapOpener i {
+    margin-right: 5px;
+}
+
+.copyright {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    color: rgb(51, 51, 51);
+    margin-top: 20px;
+}
+
+.copyrightTop {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.copyrightTop span:nth-child(1) {
+    margin-right: 5px;
+}
+
+.copyrightBottom {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.copyrightBottom span:nth-child(2) {
+    color: rgb(176, 145, 79);
+    font-weight: 600;
+    cursor: pointer;
+    font-style: italic;
+}
+
+/* ============================================================ CONTACT */
+/* ============================================================ CONTACT */
+
+
+/* ============================================================ HAMBURGER AND COG ICONS */
+/* ============================================================ HAMBURGER AND COG ICONS */
+.hamburgerBar {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    color: rgb(176, 145, 79);
+    font-size: 20px;
+    height: 50px;
+    width: 60px;
+    border: 1px solid rgb(230, 230, 230);
+    background-color: white;
+    border-radius: 10px;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+/* .cogButton {
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    height: 50px;
+    width: 60px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: -3px 5px 12px #c0baba;
+    border-radius: 5px 0 0 5px;
+}
+
+.cogButton i {
+    animation-name: rotateCog;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotateCog {
+    from {
+        transform: rotateZ(0);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+} */
+
+/* ============================================================ HAMBURGER AND COG ICONS */
+/* ============================================================ HAMBURGER AND COG ICONS */
+
+
+/* ========================================================================== MODAL IMAGE */
+/* ========================================================================== MODAL IMAGE */
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+}
+
+.modal-content {
+    margin: 5vh auto;
+    background-color: white;
+    height: 90vh;
+    width: 70vw;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.modal-content span {
+    position: absolute;
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(185, 185, 185);
+    top: -40px;
+    right: 0;
+    background-color: transparent;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content img {
+    height: 100%;
+    width: 100%;
+
+}
+
+.modal-content span:hover {
+    color: white;
+}
+
+/* ========================================================================== MODAL IMAGE */
+/* ========================================================================== MODAL IMAGE */
+
+
+/* ========================================================================== MODAL VIDEO */
+/* ========================================================================== MODAL VIDEO */
+.modal-video {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    z-index: 100;
+}
+
+.modal-content-video {
+    margin: 25vh auto;
+    background-color: white;
+    height: 50vh;
+    width: 45vw;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.modal-content-video span {
+    position: absolute;
+    cursor: pointer;
+    font-size: 50px;
+    color: rgb(185, 185, 185);
+    top: -55px;
+    right: 0;
+    background-color: transparent;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content-video iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.modal-content-video span:hover {
+    color: white;
+}
+
+/* ========================================================================== MODAL VIDEO */
+/* ========================================================================== MODAL VIDEO */
+
+
+/* =================================================================================== PRELOADER */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-image: url('../media/loading.gif');
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: center;
+}
+
+
+/* ============================================================ MEDIA QUERY */
+/* ============================================================ MEDIA QUERY */
+@media screen and (max-width: 1400px) {
+
+    /* ============================================================ ABOUT ----------> 1400px */
+    .aboutContainerCenter {
+        width: 90%;
+    }
+
+
+    /* ============================================================ SERVICES ----------> 1400px */
+    .serviceContent {
+        width: 95%;
+    }
+
+
+    /* ============================================================ PORTFOLIO ----------> 1400px */
+    .portfolioPatterns {
+        width: 90%;
+    }
+
+    .cardInfoText h2 {
+        margin: 10px 0 0;
+        font-size: 25px !important;
+        line-height: 1;
+    }
+
+    .cardInfoText h3 {
+        margin: 3px 0 0;
+        font-size: 14px;
+    }
+
+    .cardInfo i {
+        font-size: 18px;
+    }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    /* ============================================================ NAVIGATION AND CONTENT ----------> 1200px */
+    .navigationArea {
+        width: 220px;
+    }
+
+    .contentsArea {
+        width: calc(100vw - 240px);
+    }
+
+
+    /* ============================================================ MODAL ----------> 1200px */
+    .modal-content {
+        width: 85vw;
+    }
+
+
+    /* ============================================================ MODAL VIDEO ----------> 1200px */
+    .modal-content-video {
+        width: 85vw;
+    }
+
+
+    /* ============================================================ HOME ----------> 1200px */
+    .mySlides {
+        width: 100%;
+    }
+
+    .imageDarker {
+        width: 100%;
+    }
+
+
+    /* ============================================================ PORTFOLIO ----------> 1200px */
+    .portfolioPatterns {
+        width: 98%;
+    }
+
+}
+
+
+@media screen and (max-width: 992px) {
+
+    /* ============================================================ NAVIGATION AND CONTENT ----------> 992px */
+    .navigationArea {
+        width: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .contentsArea {
+        width: 100% !important;
+    }
+
+    .hamburgerBar {
+        visibility: visible;
+    }
+
+
+    /* ============================================================ MODAL ----------> 992px */
+    .modal-content {
+        margin: 20vh auto;
+        height: 60vh;
+        width: 80vw;
+    }
+
+
+    /* ============================================================ MODAL VIDEO ----------> 992px */
+    .modal-content-video {
+        margin: 20vh auto;
+        height: 60vh;
+        width: 80vw;
+    }
+
+
+    /* ============================================================ HOME ----------> 992px */
+    .mySlides {
+        width: 100%;
+    }
+
+    .imageDarker {
+        width: 100%;
+    }
+
+    .imageDarker .buttons {
+        right: 5%;
+        bottom: 10%;
+    }
+
+
+    /* ============================================================ ABOUT ----------> 992px */
+    .aboutContainerCenter {
+        width: 70%;
+    }
+
+    .profileImage {
+        width: 95%;
+        margin: 50px auto;
+    }
+
+    .profileInfoContainer {
+        width: 80%;
+    }
+
+
+    /* ============================================================ SERVICES ----------> 992px */
+    .serviceContent {
+        width: 85%;
+    }
+
+    .serviceInfo {
+        width: 90%;
+        margin: 0 auto 10px;
+    }
+
+    .serviceCard {
+        width: 90%;
+    }
+
+    .serviceVideo {
+        width: 75%;
+        height: 300px;
+    }
+
+
+    /* ============================================================ PORTFOLIO ----------> 992px */
+    .portfolioPatterns {
+        width: 75%;
+    }
+
+    .portfolioPatterns li {
+        width: 45%;
+        flex-shrink: 0;
+    }
+
+
+    /* ============================================================ TESTIMONIAL ----------> 992px */
+    .testimonialContentContainer {
+        width: 90%;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    /* ============================================================ MODAL ----------> 768px */
+    .modal-content {
+        margin: 25vh auto;
+        height: 50vh;
+        width: 90vw;
+    }
+
+
+    /* ============================================================ MODAL VIDEO ----------> 768px */
+    .modal-content-video {
+        margin: 25vh auto;
+        height: 50vh;
+        width: 90vw;
+    }
+
+
+    /* ============================================================ ABOUT ----------> 768px */
+    .aboutContainerCenter {
+        width: 90%;
+    }
+
+    .profileImage {
+        width: 95%;
+        margin: 50px auto;
+    }
+
+    .profileInfoContainer {
+        width: 90%;
+    }
+
+
+    /* ============================================================ SERVICES ----------> 768px */
+    .serviceContent {
+        width: 75%;
+    }
+
+    .serviceVideo {
+        height: 250px;
+    }
+
+
+    /* ============================================================ PORTFOLIO ----------> 768px */
+    .portfolioPatterns {
+        width: 80%;
+    }
+
+    .portfolioPatterns li {
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    .cardInfoText h2 {
+        margin: 50px 0 0;
+        font-size: 34px !important;
+        line-height: 1;
+    }
+
+    .cardInfoText h3 {
+        margin: 3px 0 0;
+        font-size: 17px;
+    }
+
+    .cardInfo i {
+        font-size: 23px;
+    }
+
+
+    /* ============================================================ TESTIMONIAL ----------> 768px */
+    .testimonialContentContainer {
+        width: 65%;
+    }
+
+    .allUsers li {
+        flex-shrink: 0;
+    }
+
+
+    /* ============================================================ CONTACT ----------> 768px */
+    .contactContent {
+        margin-bottom: 50px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .infoCard {
+        width: 100%;
+        margin: 50px 5% 0;
+    }
+
+}
+
+
+@media screen and (max-width: 576px) {
+
+    /* ============================================================ HOME ----------> 576px */
+    .mySlides {
+        width: 100%;
+    }
+
+    .imageDarker {
+        width: 100%;
+    }
+
+    .imageDarker .buttons {
+        right: 5%;
+        bottom: 12%;
+    }
+
+    /* ============================================================ ABOUT ----------> 576px */
+    .aboutContainerCenter {
+        width: 95%;
+    }
+
+
+    /* ============================================================ SERVICES ----------> 576px */
+    .serviceContent {
+        width: 95%;
+    }
+
+
+    /* ============================================================ PORTFOLIO ----------> 576px */
+    .portfolioPatterns {
+        width: 90%;
+    }
+
+    .cardInfoText h2 {
+        margin: 40px 0 0;
+        font-size: 25px !important;
+        line-height: 1;
+    }
+
+    .cardInfoText h3 {
+        margin: 3px 0 0;
+        font-size: 16px;
+    }
+
+    .cardInfo i {
+        font-size: 18px;
+    }
+
+
+    /* ============================================================ TESTIMONIAL ----------> 576px */
+    .testimonialContentContainer {
+        width: 95%;
+    }
+
+}
+
+
+/* ============================================================ STYLES FOR JQUERY AND JAVASCRIPT */
+.navigationBar-to-middle {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+}
+
+.mainLogo-move-bottom {
+    margin-top: 70px;
+    height: 40px;
+    width: 40px;
+}
+
+.navigationMoveIcon-to-center {
+    right: 50%;
+    margin-right: -12.5px;
+}
+
+.navigationBarUlLiSelected {
+    color: rgb(176, 145, 79) !important;
+    border-bottom: 2px solid rgb(176, 145, 79, 0.6) !important;
+}
+
+.navigationPathSelected {
+    color: rgb(176, 145, 79) !important;
+    border-top: 2px solid rgb(176, 145, 79) !important;
+}
+
+.allUsersLiSelected {
+    border: 2px solid rgb(176, 145, 79) !important;
+}
+
+.navigationArea-hamburger {
+    width: 240px !important;
+}
+
+.navigationAreaWidthMinimum {
+    width: 100px !important;
+}
+
+.portfolioCategoriesP-selected {
+    background-color: rgb(176, 145, 79) !important;
+    color: white !important;
+}
+
+.portfolioPatternsLi-opacity {
+    opacity: 0.2 !important;
+}
+
+.portfolioPatternsLi-opacity:hover .cardImage {
+    transform: scale(1) !important;
+}
+
+.cardInfoNotVisible {
+    visibility: hidden !important;
+}
